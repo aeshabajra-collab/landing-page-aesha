@@ -1,0 +1,212 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+  --ink: #26231e;
+  --paper: #f8f7f4;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background:
+    radial-gradient(circle at top left, rgba(215, 201, 186, 0.38), transparent 30rem),
+    linear-gradient(180deg, #ffffff 0%, var(--paper) 100%);
+  color: var(--ink);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+input,
+textarea {
+  font: inherit;
+}
+
+summary::-webkit-details-marker {
+  display: none;
+}
+
+.flodesk-card [data-ff-el="root"].ff-6a22761afab7ed56c8222677,
+.flodesk-card [data-ff-el="root"].ff-6a22761afab7ed56c8222677 * {
+  font-family: var(--font-inter), ui-sans-serif, system-ui, sans-serif !important;
+}
+
+.flodesk-card
+  [data-ff-el="root"].ff-6a22761afab7ed56c8222677
+  .ff-6a22761afab7ed56c8222677__container {
+  max-width: none !important;
+  overflow: visible !important;
+  background: transparent !important;
+}
+
+.flodesk-card
+  [data-ff-el="root"].ff-6a22761afab7ed56c8222677
+  .ff-6a22761afab7ed56c8222677__form {
+  padding: 0 !important;
+  color: #35322b !important;
+  background: transparent !important;
+  text-align: left !important;
+}
+
+.flodesk-card
+  [data-ff-el="root"].ff-6a22761afab7ed56c8222677
+  .ff-6a22761afab7ed56c8222677__title {
+  margin-bottom: 0.5rem !important;
+  color: #26231e !important;
+  font-family: var(--font-playfair), Georgia, serif !important;
+  font-size: 1.625rem !important;
+  font-weight: 600 !important;
+  line-height: 1.15 !important;
+  text-align: left !important;
+}
+
+.flodesk-card
+  [data-ff-el="root"].ff-6a22761afab7ed56c8222677
+  .ff-6a22761afab7ed56c8222677__title
+  [data-paragraph="true"] {
+  font-size: 0 !important;
+}
+
+.flodesk-card
+  [data-ff-el="root"].ff-6a22761afab7ed56c8222677
+  .ff-6a22761afab7ed56c8222677__title
+  [data-paragraph="true"]::after {
+  content: "Book Your FREE 1:1 Consultation Call";
+  font-size: 1.625rem;
+}
+
+.flodesk-card
+  [data-ff-el="root"].ff-6a22761afab7ed56c8222677
+  .ff-6a22761afab7ed56c8222677__subtitle {
+  margin-bottom: 1.5rem !important;
+  color: rgba(53, 50, 43, 0.75) !important;
+  font-size: 0.925rem !important;
+  line-height: 1.65 !important;
+  text-align: left !important;
+}
+
+.flodesk-card
+  [data-ff-el="root"].ff-6a22761afab7ed56c8222677
+  .ff-6a22761afab7ed56c8222677__subtitle
+  [data-paragraph="true"] {
+  display: none !important;
+}
+
+.flodesk-card
+  [data-ff-el="root"].ff-6a22761afab7ed56c8222677
+  .ff-6a22761afab7ed56c8222677__subtitle::after {
+  content: "Fill up the form below and we will contact you with the next steps.";
+  display: block;
+}
+
+.flodesk-card
+  [data-ff-el="root"].ff-6a22761afab7ed56c8222677
+  .ff-6a22761afab7ed56c8222677__fields {
+  display: grid !important;
+  grid-template-columns: minmax(0, 1fr) !important;
+  gap: 1rem !important;
+  margin-bottom: 1.25rem !important;
+}
+
+.flodesk-card
+  [data-ff-el="root"].ff-6a22761afab7ed56c8222677
+  .ff-6a22761afab7ed56c8222677__field {
+  margin: 0 !important;
+}
+
+.flodesk-card
+  [data-ff-el="root"].ff-6a22761afab7ed56c8222677
+  .ff-6a22761afab7ed56c8222677__control {
+  height: 3rem !important;
+  border: 1px solid #e7e2d9 !important;
+  border-radius: 0.375rem !important;
+  background: #f8f7f4 !important;
+  color: #26231e !important;
+  padding: 0.75rem 1rem !important;
+  font-size: 0.95rem !important;
+  line-height: 1.25rem !important;
+  transition: border-color 0.2s ease, background-color 0.2s ease,
+    box-shadow 0.2s ease !important;
+}
+
+.flodesk-card
+  [data-ff-el="root"].ff-6a22761afab7ed56c8222677
+  .ff-6a22761afab7ed56c8222677__control:focus {
+  border-color: #26231e !important;
+  background: #ffffff !important;
+  box-shadow: 0 0 0 4px rgba(215, 201, 186, 0.45) !important;
+}
+
+.flodesk-card
+  [data-ff-el="root"].ff-6a22761afab7ed56c8222677
+  .ff-6a22761afab7ed56c8222677__label {
+  color: rgba(53, 50, 43, 0.58) !important;
+  padding: 0.75rem 1rem !important;
+  font-size: 0.9rem !important;
+}
+
+.flodesk-card
+  [data-ff-el="root"].ff-6a22761afab7ed56c8222677
+  .ff-6a22761afab7ed56c8222677__button {
+  min-height: 3rem !important;
+  width: 100% !important;
+  border: 1px solid #26231e !important;
+  border-radius: 9999px !important;
+  background: #26231e !important;
+  color: #ffffff !important;
+  font-size: 1rem !important;
+  font-weight: 700 !important;
+  transition: background-color 0.2s ease, transform 0.2s ease !important;
+}
+
+.flodesk-card
+  [data-ff-el="root"].ff-6a22761afab7ed56c8222677
+  .ff-6a22761afab7ed56c8222677__button:hover {
+  background: #35322b !important;
+  transform: translateY(-1px);
+}
+
+.flodesk-card
+  [data-ff-el="root"].ff-6a22761afab7ed56c8222677
+  .ff-6a22761afab7ed56c8222677__button
+  span {
+  font-size: 0 !important;
+}
+
+.flodesk-card
+  [data-ff-el="root"].ff-6a22761afab7ed56c8222677
+  .ff-6a22761afab7ed56c8222677__button
+  span::after {
+  content: "Submit & Book My Free Call";
+  font-size: 1rem;
+}
+
+.flodesk-card
+  [data-ff-el="root"].ff-6a22761afab7ed56c8222677
+  .ff-6a22761afab7ed56c8222677__success-message {
+  color: #26231e !important;
+  font-size: 1rem !important;
+  font-weight: 600 !important;
+  text-align: center !important;
+}
+
+@media (min-width: 640px) {
+  .flodesk-card
+    [data-ff-el="root"].ff-6a22761afab7ed56c8222677
+    .ff-6a22761afab7ed56c8222677__fields {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+
+  .flodesk-card
+    [data-ff-el="root"].ff-6a22761afab7ed56c8222677
+    .ff-6a22761afab7ed56c8222677__field:nth-last-of-type(-n + 2) {
+    grid-column: span 2 / span 2;
+  }
+}
