@@ -1,18 +1,13 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { useRouter } from "next/navigation";
 
 export default function FlodeskEmbed() {
-  const router = useRouter();
   const mountRef = useRef<HTMLDivElement>(null);
-  const redirectTimerRef = useRef<number | null>(null);
-  const hasRedirectedRef = useRef(false);
   const [loadError, setLoadError] = useState(false);
 
   useEffect(() => {
     let cancelled = false;
-    let observer: MutationObserver | null = null;
     const injectedScripts: HTMLScriptElement[] = [];
 
     async function mountEmbed() {
@@ -57,32 +52,6 @@ export default function FlodeskEmbed() {
           injectedScripts.push(script);
         });
 
-        const root = mountRef.current.querySelector(
-          '[data-ff-el="root"].ff-6a22761afab7ed56c8222677'
-        );
-
-        if (!root) return;
-
-        const redirectAfterSuccess = () => {
-          if (
-            hasRedirectedRef.current ||
-            root.getAttribute("data-ff-stage") !== "success"
-          ) {
-            return;
-          }
-
-          hasRedirectedRef.current = true;
-          redirectTimerRef.current = window.setTimeout(() => {
-            router.push("/thanks");
-          }, 1800);
-        };
-
-        observer = new MutationObserver(redirectAfterSuccess);
-        observer.observe(root, {
-          attributes: true,
-          attributeFilter: ["data-ff-stage", "class"]
-        });
-        redirectAfterSuccess();
       } catch {
         if (!cancelled) setLoadError(true);
       }
@@ -92,13 +61,9 @@ export default function FlodeskEmbed() {
 
     return () => {
       cancelled = true;
-      observer?.disconnect();
       injectedScripts.forEach((script) => script.remove());
-      if (redirectTimerRef.current) {
-        window.clearTimeout(redirectTimerRef.current);
-      }
     };
-  }, [router]);
+  }, []);
 
   return (
     <div className="flodesk-card">
