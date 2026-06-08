@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
+import VimeoThankYouVideo from "@/components/VimeoThankYouVideo";
 
-const vimeoEmbedUrl = "https://player.vimeo.com/video/1198850764";
 const whatsappChatUrl = "";
 
 export default function ThanksPage() {
@@ -30,19 +30,7 @@ export default function ThanksPage() {
           </p>
 
           <div className="mt-8 aspect-video w-full overflow-hidden rounded-lg border border-line bg-mist">
-            {vimeoEmbedUrl ? (
-              <iframe
-                src={vimeoEmbedUrl}
-                title="Consultation next steps video"
-                allow="autoplay; fullscreen; picture-in-picture"
-                allowFullScreen
-                className="h-full w-full"
-              />
-            ) : (
-              <div className="flex h-full w-full items-center justify-center px-6 text-center text-sm font-medium leading-6 text-charcoal/70">
-                Vimeo video will appear here after you provide the link.
-              </div>
-            )}
+            <VimeoThankYouVideo />
           </div>
 
           <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
