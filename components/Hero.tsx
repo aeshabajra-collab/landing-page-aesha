@@ -21,7 +21,7 @@ export default function Hero() {
       <div className="mx-auto flex max-w-5xl flex-col items-center">
         <Image
           src="/aesha-logo.png"
-          alt="Aesha Bhattarai Acharya"
+          alt="Aesha Bajracharya"
           width={174}
           height={174}
           priority

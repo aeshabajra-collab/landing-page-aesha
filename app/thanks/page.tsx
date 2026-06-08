@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import VimeoThankYouVideo from "@/components/VimeoThankYouVideo";
 
-const whatsappChatUrl = "";
+const whatsappChatUrl = "https://wa.me/message/GQUI3UZAHCKAM1";
 
 export default function ThanksPage() {
   return (
@@ -10,7 +10,7 @@ export default function ThanksPage() {
       <div className="mx-auto flex max-w-4xl flex-col items-center text-center">
         <Image
           src="/aesha-logo.png"
-          alt="Aesha Bhattarai Acharya"
+          alt="Aesha Bajracharya"
           width={150}
           height={150}
           className="h-24 w-auto object-contain sm:h-32"

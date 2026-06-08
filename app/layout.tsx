@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     process.env.NEXT_PUBLIC_SITE_URL ??
       "https://aesha-digital-consultation.vercel.app"
   ),
-  title: "Free Digital Marketing Consultation | Aesha Bhattarai Acharya",
+  title: "Free Digital Marketing Consultation | Aesha Bajracharya",
   description:
     "Book a free 1:1 consultation call and get a customized digital marketing plan for your business.",
   openGraph: {
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
         url: "/aesha-logo.png",
         width: 512,
         height: 512,
-        alt: "Aesha Bhattarai Acharya"
+        alt: "Aesha Bajracharya"
       }
     ]
   },
